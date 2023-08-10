@@ -1,24 +1,28 @@
 *{
-    margin: 0;
-    padding: 0;
+    /* margin-left: auto;
+    margin-right: auto; */
+    box-sizing: border-box;
 }
 
 body {
-    margin-right: 5%;
-    margin-left: 5%;
+    align-items: center;
+    
+    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(235, 243, 226);
     
     display: grid;
     grid-template-rows: 1fr 1fr 6fr 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-areas: 
         "header"
         "nav"
         "main"
         "footer";
     height: 100vh;
+    
     grid-gap: 0.5em;
+    
 }
 
 /* .container {
@@ -51,7 +55,6 @@ header img {
 nav {
     margin-top: 20px;
     grid-area: nav;
-    
     
     
 }
@@ -91,6 +94,7 @@ main {
 
 
 main .highlight {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,6 +105,7 @@ main .highlight {
     background-repeat: no-repeat;
     border-radius: 25px;
     color: aliceblue;
+   
 }
 
 .highlight > h1 {
@@ -184,4 +189,28 @@ footer {
     
 }
 
+@media only screen and (max-width: 400px) {
+    main {
+    
+        
+        
+        
+        grid-template-rows: auto auto; /* Divided main into two rows */
+        
+    }
+    
+    
+    nav a {
+        
+        font-size: 1.0rem;
+    }
 
+    main .projects {
+        
+         /* Changed to grid to use grid-template-columns */
+        grid-template-columns: auto; /* Divided projects into three columns */
+        
+    }
+    
+    
+}
